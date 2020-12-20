@@ -1,0 +1,620 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`APP Tests renders correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "height": "100%",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <View
+      testID="targetlist"
+    >
+      <RCTScrollView
+        data={Array []}
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={true}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={16}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View />
+      </RCTScrollView>
+    </View>
+    <View
+      style={
+        Object {
+          "height": "80%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "white",
+            "marginTop": "50%",
+          }
+        }
+      >
+        Data: 
+        
+      </Text>
+    </View>
+    <RCTScrollView
+      data={
+        Array [
+          <Text
+            style={
+              Object {
+                "color": "yellow",
+                "fontSize": 20,
+              }
+            }
+            value="Lucas"
+          >
+            Lucas
+          </Text>,
+          <Image
+            source={
+              Object {
+                "uri": "https://ca.slack-edge.com/T0WU5R8NT-U015FNL1RQF-87fa8c57d5ca-512",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 60,
+                "height": 73,
+                "width": 73,
+              }
+            }
+            value="Till"
+          />,
+          <Image
+            source={
+              Object {
+                "uri": "https://ca.slack-edge.com/T0WU5R8NT-UREPE1AR2-d3cad052b4a2-512",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 60,
+                "height": 73,
+                "width": 73,
+              }
+            }
+            value="Andrew"
+          />,
+          <Image
+            source={
+              Object {
+                "uri": "https://ca.slack-edge.com/T0WU5R8NT-U018DCLH4TG-ebb6b972770c-512",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 60,
+                "height": 73,
+                "width": 73,
+              }
+            }
+            value="Steven"
+          />,
+          <Image
+            source={
+              Object {
+                "uri": "https://ca.slack-edge.com/T0WU5R8NT-UFCH43E4B-bf2eeac7c0fa-512",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 60,
+                "height": 73,
+                "width": 73,
+              }
+            }
+            value="Berta"
+          />,
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={true}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={16}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "position": "absolute",
+        }
+      }
+      testID="sourcelist"
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onPress={
+              Object {
+                "onMoveShouldSetResponder": [Function],
+                "onMoveShouldSetResponderCapture": [Function],
+                "onResponderEnd": [Function],
+                "onResponderGrant": [Function],
+                "onResponderMove": [Function],
+                "onResponderReject": [Function],
+                "onResponderRelease": [Function],
+                "onResponderStart": [Function],
+                "onResponderTerminate": [Function],
+                "onResponderTerminationRequest": [Function],
+                "onStartShouldSetResponder": [Function],
+                "onStartShouldSetResponderCapture": [Function],
+              }
+            }
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            panResponder={
+              Object {
+                "getInteractionHandle": [Function],
+                "panHandlers": Object {
+                  "onMoveShouldSetResponder": [Function],
+                  "onMoveShouldSetResponderCapture": [Function],
+                  "onResponderEnd": [Function],
+                  "onResponderGrant": [Function],
+                  "onResponderMove": [Function],
+                  "onResponderReject": [Function],
+                  "onResponderRelease": [Function],
+                  "onResponderStart": [Function],
+                  "onResponderTerminate": [Function],
+                  "onResponderTerminationRequest": [Function],
+                  "onStartShouldSetResponder": [Function],
+                  "onStartShouldSetResponderCapture": [Function],
+                },
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "maroon",
+                "borderRadius": 40,
+                "height": 80,
+                "justifyContent": "center",
+                "margin": 0,
+                "width": 80,
+              }
+            }
+            testID="renderitem"
+          >
+            <Text
+              style={
+                Object {
+                  "color": "yellow",
+                  "fontSize": 20,
+                }
+              }
+            >
+              Lucas
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onPress={
+              Object {
+                "onMoveShouldSetResponder": [Function],
+                "onMoveShouldSetResponderCapture": [Function],
+                "onResponderEnd": [Function],
+                "onResponderGrant": [Function],
+                "onResponderMove": [Function],
+                "onResponderReject": [Function],
+                "onResponderRelease": [Function],
+                "onResponderStart": [Function],
+                "onResponderTerminate": [Function],
+                "onResponderTerminationRequest": [Function],
+                "onStartShouldSetResponder": [Function],
+                "onStartShouldSetResponderCapture": [Function],
+              }
+            }
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            panResponder={
+              Object {
+                "getInteractionHandle": [Function],
+                "panHandlers": Object {
+                  "onMoveShouldSetResponder": [Function],
+                  "onMoveShouldSetResponderCapture": [Function],
+                  "onResponderEnd": [Function],
+                  "onResponderGrant": [Function],
+                  "onResponderMove": [Function],
+                  "onResponderReject": [Function],
+                  "onResponderRelease": [Function],
+                  "onResponderStart": [Function],
+                  "onResponderTerminate": [Function],
+                  "onResponderTerminationRequest": [Function],
+                  "onStartShouldSetResponder": [Function],
+                  "onStartShouldSetResponderCapture": [Function],
+                },
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "maroon",
+                "borderRadius": 40,
+                "height": 80,
+                "justifyContent": "center",
+                "margin": 0,
+                "width": 80,
+              }
+            }
+            testID="renderitem"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://ca.slack-edge.com/T0WU5R8NT-U015FNL1RQF-87fa8c57d5ca-512",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 73,
+                  "width": 73,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onPress={
+              Object {
+                "onMoveShouldSetResponder": [Function],
+                "onMoveShouldSetResponderCapture": [Function],
+                "onResponderEnd": [Function],
+                "onResponderGrant": [Function],
+                "onResponderMove": [Function],
+                "onResponderReject": [Function],
+                "onResponderRelease": [Function],
+                "onResponderStart": [Function],
+                "onResponderTerminate": [Function],
+                "onResponderTerminationRequest": [Function],
+                "onStartShouldSetResponder": [Function],
+                "onStartShouldSetResponderCapture": [Function],
+              }
+            }
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            panResponder={
+              Object {
+                "getInteractionHandle": [Function],
+                "panHandlers": Object {
+                  "onMoveShouldSetResponder": [Function],
+                  "onMoveShouldSetResponderCapture": [Function],
+                  "onResponderEnd": [Function],
+                  "onResponderGrant": [Function],
+                  "onResponderMove": [Function],
+                  "onResponderReject": [Function],
+                  "onResponderRelease": [Function],
+                  "onResponderStart": [Function],
+                  "onResponderTerminate": [Function],
+                  "onResponderTerminationRequest": [Function],
+                  "onStartShouldSetResponder": [Function],
+                  "onStartShouldSetResponderCapture": [Function],
+                },
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "maroon",
+                "borderRadius": 40,
+                "height": 80,
+                "justifyContent": "center",
+                "margin": 0,
+                "width": 80,
+              }
+            }
+            testID="renderitem"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://ca.slack-edge.com/T0WU5R8NT-UREPE1AR2-d3cad052b4a2-512",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 73,
+                  "width": 73,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onPress={
+              Object {
+                "onMoveShouldSetResponder": [Function],
+                "onMoveShouldSetResponderCapture": [Function],
+                "onResponderEnd": [Function],
+                "onResponderGrant": [Function],
+                "onResponderMove": [Function],
+                "onResponderReject": [Function],
+                "onResponderRelease": [Function],
+                "onResponderStart": [Function],
+                "onResponderTerminate": [Function],
+                "onResponderTerminationRequest": [Function],
+                "onStartShouldSetResponder": [Function],
+                "onStartShouldSetResponderCapture": [Function],
+              }
+            }
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            panResponder={
+              Object {
+                "getInteractionHandle": [Function],
+                "panHandlers": Object {
+                  "onMoveShouldSetResponder": [Function],
+                  "onMoveShouldSetResponderCapture": [Function],
+                  "onResponderEnd": [Function],
+                  "onResponderGrant": [Function],
+                  "onResponderMove": [Function],
+                  "onResponderReject": [Function],
+                  "onResponderRelease": [Function],
+                  "onResponderStart": [Function],
+                  "onResponderTerminate": [Function],
+                  "onResponderTerminationRequest": [Function],
+                  "onStartShouldSetResponder": [Function],
+                  "onStartShouldSetResponderCapture": [Function],
+                },
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "maroon",
+                "borderRadius": 40,
+                "height": 80,
+                "justifyContent": "center",
+                "margin": 0,
+                "width": 80,
+              }
+            }
+            testID="renderitem"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://ca.slack-edge.com/T0WU5R8NT-U018DCLH4TG-ebb6b972770c-512",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 73,
+                  "width": 73,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onPress={
+              Object {
+                "onMoveShouldSetResponder": [Function],
+                "onMoveShouldSetResponderCapture": [Function],
+                "onResponderEnd": [Function],
+                "onResponderGrant": [Function],
+                "onResponderMove": [Function],
+                "onResponderReject": [Function],
+                "onResponderRelease": [Function],
+                "onResponderStart": [Function],
+                "onResponderTerminate": [Function],
+                "onResponderTerminationRequest": [Function],
+                "onStartShouldSetResponder": [Function],
+                "onStartShouldSetResponderCapture": [Function],
+              }
+            }
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            panResponder={
+              Object {
+                "getInteractionHandle": [Function],
+                "panHandlers": Object {
+                  "onMoveShouldSetResponder": [Function],
+                  "onMoveShouldSetResponderCapture": [Function],
+                  "onResponderEnd": [Function],
+                  "onResponderGrant": [Function],
+                  "onResponderMove": [Function],
+                  "onResponderReject": [Function],
+                  "onResponderRelease": [Function],
+                  "onResponderStart": [Function],
+                  "onResponderTerminate": [Function],
+                  "onResponderTerminationRequest": [Function],
+                  "onStartShouldSetResponder": [Function],
+                  "onStartShouldSetResponderCapture": [Function],
+                },
+              }
+            }
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "maroon",
+                "borderRadius": 40,
+                "height": 80,
+                "justifyContent": "center",
+                "margin": 0,
+                "width": 80,
+              }
+            }
+            testID="renderitem"
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "https://ca.slack-edge.com/T0WU5R8NT-UFCH43E4B-bf2eeac7c0fa-512",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 73,
+                  "width": 73,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;
