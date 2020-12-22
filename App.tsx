@@ -44,7 +44,6 @@ const APP = () => {
 
 let styles = StyleSheet.create({
   list: {
-    // opacity: draggingIndex === index ? 0 : 1,
     height: 80,
     width: 80,
     borderRadius: 40,
