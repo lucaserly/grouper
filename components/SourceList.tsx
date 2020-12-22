@@ -1,13 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import {
-  Animated,
-  Text,
-  FlatList,
-  Image,
-  PanResponder,
-  View,
-} from 'react-native';
-
+import React, { useState, useRef } from 'react';
+import { Animated, FlatList, PanResponder } from 'react-native';
 import RenderItem from './RenderItem';
 import helperFuncs from './../utils/helperFunctions'
 
@@ -28,13 +20,9 @@ const SourceList = (props: any) => {
     setSourceCounter
   } = props;
 
-  // console.log('INSIDE SOURCELIST sourceData', sourceData)
-
-  console.log('listItemWidth', listItemWidth)
   const [sourceList, setsourceList] = useState(sourceData);
   const [currentItem, setcurrentItem] = useState({});
   const [hidden, sethidden] = useState(true);
-
   const [draggingIndex, setdraggingIndex] = useState(-1);
 
   let animatedItemPoint = useRef(new Animated.ValueXY()).current;
@@ -44,22 +32,14 @@ const SourceList = (props: any) => {
 
   const panResponder = React.useRef(
     PanResponder.create({
-      // Ask to be the responder:
       onStartShouldSetPanResponder: (evt, gestureState) => true,
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
       onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
-
       onPanResponderGrant: (evt, gestureState) => {
-        console.log('evt', evt)
-        console.log('gestureState', gestureState)
-        // console.log('evt', evt)
         sethidden(false);
-        // currentItemIndex = xToIndex(gestureState.x0);
-        // console.log('gestureState', {...gestureState})
         currentItemIndex = helperFuncs.xToIndex(gestureState.x0, scrollOffSet, flatListLayoutX,
-          listItemWidth, sourceList.length); // consider implementing typescript for the helper function's arguments.
-        console.log('currenindex GRANT', currentItemIndex)
+          listItemWidth, sourceList.length);
         setdraggingIndex(currentItemIndex)
         setcurrentItem(sourceList[currentItemIndex]);
 
@@ -82,13 +62,7 @@ const SourceList = (props: any) => {
       },
       onPanResponderTerminationRequest: (evt, gestureState) => false,
       onPanResponderRelease: (evt, gestureState) => {
-        console.log('RELEASE')
-        // console.log('currenindex', currentItemIndex)
-        // console.log('gestureState', {...gestureState})
-        // console.log('gestureState', gestureState)
-
-        const itemToSend = sourceList[currentItemIndex]; // Why not currentItem????
-        console.log('itemToSend', itemToSend)
+        const itemToSend = sourceList[currentItemIndex];
         Animated.decay(animatedItemPoint, {
           useNativeDriver: false,
           velocity: { x: gestureState.vx, y: gestureState.vy },
@@ -102,23 +76,17 @@ const SourceList = (props: any) => {
             duration: 500,
             useNativeDriver: false,
           }).start(() => {
-            sendItems(itemToSend); // one of these 4 caues memory leak
+            sendItems(itemToSend);
             sethidden(true);
             setTargetCounter(targetCounter + 1);
             setSourceCounter(sourceCounter - 1);
           });
         });
 
-        /*
-        * Check if there's a reason for creating the new variable (newSourceList).
-        * Eitherclone the old list and workwith the newSourceList ====>let newSourceList = [...sourceList];
-        *ORuse the old sourceList directly. There's no need forthe new variable.
-        */
-        let newSourceList = sourceList;
         if (currentItemIndex > -1) {
-          newSourceList.splice(currentItemIndex, 1);
+          sourceList.splice(currentItemIndex, 1);
         }
-        setsourceList(newSourceList);
+        setsourceList(sourceList);
         setdraggingIndex(-1);
       },
       onShouldBlockNativeResponder: (evt, gestureState) => {
@@ -127,28 +95,14 @@ const SourceList = (props: any) => {
     }),
   ).current;
 
-  // test the result of the function not the logic itself
-  // if you press
-  // focus on trigger the event of releasing the pan responder
-
-
-  // Incorporate the viewon this function into the renderItem component
-  //Get rid of this function and render the component directly on line145
-
   return (
     <>
       <FlatList
         data={sourceList}
         testID='sourcelist'
         renderItem={({ item, index }) => {
-          // const panner = { ...panResponder.panHandlers };
-          // console.log('INSIDE FLAT LIST')
-          // console.log('item', item)
-          // console.log('index', index)
-          // console.log('sourceStyle', sourceStyle)
-          // console.log('panner', panner)
-          return <RenderItem item={item} index={index} sourceStyle={sourceStyle} panHandlers={panResponder.panHandlers} panResponder={panResponder} />
-          // return RenderItem(item, index, sourceStyle, panner)
+          return <RenderItem item={item} index={index} sourceStyle={sourceStyle}
+            panHandlers={panResponder.panHandlers} panResponder={panResponder} />
         }}
         keyExtractor={(item, index) => index + ''}
         horizontal={horizontal}
@@ -158,8 +112,6 @@ const SourceList = (props: any) => {
         scrollEventThrottle={16}
         onScroll={e => scrollOffSet = e.nativeEvent.contentOffset.x}
         onLayout={(e) => {
-          // console.log('INSIDE ON LAYOUT')
-          // console.log('e', e)
           sendSourceLocation(e.nativeEvent.layout.y);
           flatListLayoutX = e.nativeEvent.layout.x;
         }}
@@ -173,8 +125,8 @@ const SourceList = (props: any) => {
             position: 'absolute',
           }}
         >
-          <RenderItem item={currentItem} index='hiddenItem' sourceStyle={sourceStyle} panHandlers={panResponder.panHandlers} />
-          {/* {RenderItem(currentItem)} */}
+          <RenderItem item={currentItem} index='hiddenItem' sourceStyle={sourceStyle}
+            panHandlers={panResponder.panHandlers} />
         </Animated.View>
       )}
     </>

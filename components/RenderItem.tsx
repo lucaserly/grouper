@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-  Text,
-  Image,
-  View,
-} from 'react-native';
+import { Text, Image, View } from 'react-native';
 
-const RenderItem = (props) => {
-  // console.log('------> COMPONENT RENDER ITEM')
-  // console.log('props', props)
-  // console.log('props', props)
+const RenderItem = (props: any) => {
   const { item, index, sourceStyle, panHandlers, panResponder } = props;
-  // console.log('item', item)
   let renderThisItem;
   if (item && item.type) {
     if (item.type.displayName == 'Image') renderThisItem = <Image style={item.props.style} source={item.props.source} />

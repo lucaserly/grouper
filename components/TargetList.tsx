@@ -1,18 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-  Animated,
-  Text,
-  FlatList,
-  Image,
-  PanResponder,
-  View,
-} from 'react-native';
-
+import { Animated, FlatList, PanResponder, View } from 'react-native';
 import RenderItem from './RenderItem';
 import helperFuncs from './../utils/helperFunctions'
 
 const TargetList = (props: any) => {
-  // console.log('------> 1st TARGETLIST')
   const {
     horizontal,
     returnItems,
@@ -28,7 +19,6 @@ const TargetList = (props: any) => {
     sourceCounter,
     setSourceCounter
   } = props;
-
 
   const [targetList, setTargetList] = useState(targetData);
 
@@ -48,19 +38,16 @@ const TargetList = (props: any) => {
 
   const panResponderTarget = React.useRef(
     PanResponder.create({
-      // Ask to be the responder:
       onStartShouldSetPanResponder: (evt, gestureState) => true,
       onStartShouldSetPanResponderCapture: (evt, gestureState) => true,
       onMoveShouldSetPanResponder: (evt, gestureState) => true,
       onMoveShouldSetPanResponderCapture: (evt, gestureState) => true,
 
       onPanResponderGrant: (evt, gestureState) => {
-
         sethidden(false);
-        currentItemIndex = helperFuncs.xToIndex(gestureState.x0, scrollOffSet, flatListLayoutX, listItemWidth, targetList.length);
-
+        currentItemIndex = helperFuncs.xToIndex(gestureState.x0, scrollOffSet, flatListLayoutX,
+          listItemWidth, targetList.length);
         setcurrentItem(targetList[currentItemIndex]);
-
         Animated.event([{
           y: animatedItemPoint.y,
           x: animatedItemPoint.x,
@@ -90,7 +77,7 @@ const TargetList = (props: any) => {
         }).start(() => {
           Animated.timing(animatedItemPoint, {
             toValue: {
-              y: sourceListLocation, // why changed this?
+              y: sourceListLocation,
               x: sourceCounter * listItemWidth,
             },
             duration: 500,
@@ -98,48 +85,24 @@ const TargetList = (props: any) => {
           }).start(() => {
             returnItems(itemToSendBack);
             sethidden(true);
-            setTargetCounter(targetCounter - 1); // what's happening here?
+            setTargetCounter(targetCounter - 1);
             setSourceCounter(sourceCounter + 1);
           });
         });
 
-        let newTargetList = targetList;
         if (currentItemIndex > -1) {
-          newTargetList.splice(currentItemIndex, 1);
+          targetList.splice(currentItemIndex, 1);
         }
-        setTargetList(newTargetList);
-        // setdraggingIndex(-1);
-        animatedItemPoint.flattenOffset(); // what is this?
+        setTargetList(targetList);
+        animatedItemPoint.flattenOffset();
       },
-      onShouldBlockNativeResponder: (evt, gestureState) => { // what is this?
+      onShouldBlockNativeResponder: (evt, gestureState) => {
         return true;
       },
     }),
   ).current;
 
-  // const renderData = (item) => {
-  //   return (
-  //     <View
-  //       {...panResponderTarget.panHandlers}
-  //       style={targetStyle}>
-  //       <RenderItem item={item} />
-  //     </View>
-  //   )
-  // }
   return (
-    // you render the component
-    // inside the render getbytestId
-    // check if that testID is present
-    // pass in data in targetlist and check if it is rendered
-    // check callback function in rnderitem
-    // check hidden -> if happens ->
-    // mock hidden
-
-    // start from smallest component
-    // check whether you can see it
-    // then check functionalities
-    //
-
     <View testID='targetlist'>
       <FlatList
         horizontal={horizontal}
@@ -147,12 +110,8 @@ const TargetList = (props: any) => {
         showsHorizontalScrollIndicator={false}
         data={targetData}
         renderItem={({ item, index }) => {
-          // const panner = { ...panResponderTarget.panHandlers };
-          // console.log('TARGET LIST FLAT LIST')
-          // console.log('item', item)
-          // return RenderItem(item, index, targetStyle, panner)
-          // return renderData(item, index);
-          return <RenderItem item={item} index={index} sourceStyle={targetStyle} panHandlers={panResponderTarget.panHandlers} />
+          return <RenderItem item={item} index={index} sourceStyle={targetStyle}
+            panHandlers={panResponderTarget.panHandlers} />
 
         }}
         keyExtractor={(item, index) => index + ''}
@@ -171,8 +130,8 @@ const TargetList = (props: any) => {
             position: 'absolute',
           }}
         >
-          {/* {RenderItem(currentItem)} */}
-          <RenderItem item={currentItem} index='hiddenItem' sourceStyle={targetStyle} panHandlers={panResponderTarget.panHandlers} />
+          <RenderItem item={currentItem} index='hiddenItem'
+            sourceStyle={targetStyle} panHandlers={panResponderTarget.panHandlers} />
         </Animated.View>
       )}
     </View>

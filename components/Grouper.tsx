@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import TargetList from './TargetList';
 import SourceList from './SourceList';
 
-const Grouper = (props) => {
+const Grouper = (props: any) => {
 
-  const incomingData = props.children[2].props.children.length ? props.children[2].props.children.map(el => el) : [props.children[2].props.children];
-
+  const incomingData = props.children[2].props.children.length ? props.children[2].props.children.map((el: any) => el) : [props.children[2].props.children];
   const [targetListLocation, setTargetListLocation] = useState(0);
   const [sourceListLocation, setSourceListLocation] = useState(568);
   const [sourceData, setSourceData] = useState(incomingData)
@@ -15,24 +14,24 @@ const Grouper = (props) => {
 
   useEffect(() => {
     if (targetData.length) {
-      props.setValues(targetData.map(el => el.props.value))
+      props.setValues(targetData.map((el: any) => el.props.value))
     }
   }, [targetData, sourceData])
 
-  const target = props.children[0]; //TargetList
-  const middle = props.children[1]; //View behind the Lists
-  const source = props.children[2]; //SourceList
+  const target = props.children[0];
+  const middle = props.children[1];
+  const source = props.children[2];
   const targetStyle = props.children[0].props.style;
   const sourceStyle = props.children[2].props.style;
   const listItemWidth = sourceStyle.width;
   const listItemHeight = sourceStyle.height;
 
-  const sendItems = (item) => {
-    setTargetData((list: any) => [...list, item]);
+  const sendItems = (item: never) => {
+    setTargetData((list: never[]) => [...list, item]);
   };
 
-  const returnItems = (item) => {
-    setSourceData((list: any) => [...list, item]);
+  const returnItems = (item: any) => {
+    setSourceData((list: any[]) => [...list, item]);
   };
 
   const sendTargetLocation = (y) => {
@@ -48,14 +47,14 @@ const Grouper = (props) => {
       {[
         React.cloneElement(target, {
           key: Math.random().toString(),
-          targetData, //all the items sent to the TargetList
-          sendTargetLocation, //fn to set the y-Coordinate of the TargetList
-          returnItems,  //fn to return item from Target to SourceList
-          targetListLocation, //y-Coordinate of the TargetList
-          targetStyle, //style set in the props of TargetList
-          listItemWidth,  //read from the sourceStyle
-          listItemHeight, //read from the sourceStyle
-          sourceListLocation, //y-Coordinate of the SourceList
+          targetData,
+          sendTargetLocation,
+          returnItems,
+          targetListLocation,
+          targetStyle,
+          listItemWidth,
+          listItemHeight,
+          sourceListLocation,
           targetCounter,
           setTargetCounter,
           sourceCounter,
@@ -67,14 +66,14 @@ const Grouper = (props) => {
         ),
         React.cloneElement(source, {
           key: Math.random().toString(),
-          sourceData,  //all the children of SourceList
-          sendSourceLocation, //fn to set the y-Coordinate of the SourceList
-          sendItems,  //fn to send item from Source to TargetList
-          targetListLocation, //y-Coordinate of the TargetList
-          sourceStyle, //style set in the props of SourceList
-          listItemWidth,  //read from the sourceStyle
-          listItemHeight, //read from the sourceStyle
-          sourceListLocation, //y-Coordinate of the SourceList
+          sourceData,
+          sendSourceLocation,
+          sendItems,
+          targetListLocation,
+          sourceStyle,
+          listItemWidth,
+          listItemHeight,
+          sourceListLocation,
           targetCounter,
           setTargetCounter,
           sourceCounter,

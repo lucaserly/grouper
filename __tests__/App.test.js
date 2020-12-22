@@ -1,5 +1,4 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
 import APP from '../App';
 

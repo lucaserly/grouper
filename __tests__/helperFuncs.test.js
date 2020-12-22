@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 import helperFuncs from '../utils/helperFunctions';
 import mocks from '../__mocks__/mocks';
 import testResults from './SourceList.test';

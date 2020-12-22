@@ -1,6 +1,5 @@
 import React from 'react';
-import { FlatList, View } from 'react-native';
-import { render, fireEvent, createEvent, cleanup } from '@testing-library/react-native';
+import { render, cleanup } from '@testing-library/react-native';
 import SourceList from '../components/SourceList';
 import mocks from '../__mocks__/mocks';
 
@@ -22,10 +21,6 @@ describe('SourceList Tests', () => {
     expect(arrayLen).toEqual(output);
     testResults.arrayLength = arrayLen;
   });
-  // test('get an overview of the dom', () => {
-  //   const { debug } = render(<SourceList sourceData={mocks.sourceData} />);
-  //   debug();
-  // });
 });
 
 export default testResults;
