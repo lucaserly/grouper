@@ -2,19 +2,19 @@
 
 Customizable animation for flicking elements from one list to another for react-native
 
-## Built with
+### Built with
 - [React Native & Expo](https://reactnative.dev)
 - [TypeScript](https://www.typescriptlang.org)
 
-## Tested with 
+### Tested with 
 - [Jest](https://jestjs.io/)
 
-## Observations
+### Observations
 
 - I was given this project with the goal to implement testing.
 - The main objective was to test the core functionality of the app from the user perspective. 
 
-## Developer
+### Developer
 Lucas Erlacher:
   - [GitHub](https://github.com/lucaserly)
   - [LinkedIn](https://www.linkedin.com/in/lucaserlacher/)
