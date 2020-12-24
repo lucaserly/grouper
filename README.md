@@ -15,9 +15,10 @@ Customizable animation for flicking elements from one list to another for react-
 
 ### Observations
 
-- I was given this project with the goal to implement testing.
-- The main objective was to test the core functionality of the app from the user's perspective.
-- I was not able to trigger the panresponder through the fireEvent API. Apparently the onResponderGrant resets the parameter gestureState being passed to default values. 
+- I was given this project with the goal to implement testing
+- The main objective was to test the core functionality of the app from the user's perspective
+- I was not able to trigger the PanResponder through the fireEvent API. Apparently the onResponderGrant resets the parameter gestureState being passed to default values
+- 
 
 ### Developer
 Lucas Erlacher:
