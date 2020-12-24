@@ -4,7 +4,7 @@ Customizable animation for flicking elements from one list to another for react-
 
 ### Screenshots
 
-<p align="center"><img alt="Screenshot 2020-12-15 at 13 05 32" src="https://user-images.githubusercontent.com/62465231/103072542-0aaec880-45c6-11eb-8b0e-5d6a81c66bef.png"></p>
+![Screenshot 2020-12-24 at 08 55 27](https://user-images.githubusercontent.com/62465231/103072542-0aaec880-45c6-11eb-8b0e-5d6a81c66bef.png)
 
 ### Built with
 - [React Native & Expo](https://reactnative.dev)
